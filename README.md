@@ -15,13 +15,13 @@ If you have any problem, please email me:feixuwu@outlook.com.
 # Supported Platform
 ★ 1. Win64
 
-★ 2. Android
+★ 2. [Android](https://play.google.com/store/apps/details?id=com.anyfun.TankCrash)
 
 ★ 3. IOS
 
 ★ 4. UWP
 
-★ 5. HTML5
+★ 5. [HTML5](http://50.116.0.118)
 
 ★ 6. Linux
 
