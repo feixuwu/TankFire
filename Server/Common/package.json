@@ -1,0 +1,18 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clone": "^2.1.1",
+    "dnode": "^1.2.2",
+    "node-uuid": "^1.4.8",
+    "redis": "^2.8.0",
+    "ws": "^3.1.0"
+  }
+}

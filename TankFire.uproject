@@ -1,0 +1,45 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{12D0E930-40EE-370C-DD03-D8B445D58621}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "TankFire",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"OnlineSubsystemUtils",
+				"AIModule"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OculusVR",
+			"Enabled": false
+		},
+		{
+			"Name": "AppleARKit",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemGoogle",
+			"Enabled": true
+		},
+		{
+			"Name": "HTML5Networking",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemLive",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"XboxOne",
+				"UWP64",
+				"UWP32"
+			]
+		}
+	]
+}

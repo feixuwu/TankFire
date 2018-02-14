@@ -1,0 +1,43 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "OnlineSubsystemEZOnline",
+  "Description": "",
+  "Category": "Other",
+  "CreatedBy": "",
+  "CreatedByURL": "",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "OnlineSubsystemEZOnline",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+	{
+      "Name": "EZOnlineEditor",
+      "Type": "Editor",
+      "LoadingPhase" : "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "WebSocket",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineSubsystemUtils",
+      "Enabled": true
+    },
+    {
+      "Name": "OnlineSubsystem",
+      "Enabled": true
+    }
+
+  ]
+}

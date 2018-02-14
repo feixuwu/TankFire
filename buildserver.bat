@@ -1,0 +1,3 @@
+"D:\GitHub\UnrealEngine4\Engine\Build\BatchFiles\RunUAT" BuildCookRun -project="D:\GitHub\TankFire\TankFire.uproject" -noP4 -platform=Linux -clientconfig=Shipping -serverconfig=Shipping -cook -server -serverplatform=Linux -noclient -build -stage -pak -archive -archivedirectory="D:\GitHub\TankFire\Linux"
+"D:\GitHub\UnrealEngine4\Engine\Build\BatchFiles\RunUAT" BuildCookRun -project="D:\GitHub\TankFire\TankFire.uproject" -noP4 -platform=Linux -clientconfig=Shipping -serverconfig=Shipping -cook -server -serverplatform=Linux -noclient -NoCompile -stage -pak -archive -archivedirectory="D:\GitHub\TankFire\Linux"
+pause
