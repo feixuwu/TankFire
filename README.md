@@ -9,6 +9,8 @@ After that, I see the unreal engine4, I think it's time to use unreal engine 4 t
 I can build the project to dedicated server, and this saved me a lot of time. this game should works on PC, mobile and HTML5.
 Finaly I finished the basic game, and you here is the html5 version, you can use latest firefox to test [this game](http://50.116.0.118). And here is the [youtube video](https://youtu.be/GOS8iBXGaEU).
 
+If you have any problem, please email me:feixuwu@outlook.com.
+
 # Supported Platform
 ★ 1. Win64
 
