@@ -80,14 +80,19 @@ Current Only test with 4.18.
   And then configure the server config file under the Server/Config/. The CenterServer also need a redis server to read and save
   the account info. If you run on windows 10, you can enable the bash linux system and use apt-get to install a redis server.
   
+  
 ★ Dedicated Server
 
   The dedicated server, you can build it for linux and windows, or just test on editor by run the runserver.bat.
   If you want the dedicated server work for html5 client, you need configure the DefaultEngine.ini to let the engine use 
   WebSocketNetworkDriver, just add this to the default engine.ini:
+  
  [/Script/Engine.GameEngine]
+ 
 !NetDriverDefinitions=ClearArray
-+NetDriverDefinitions=(DefName="GameNetDriver", DriverClassName="/Script/WebSocketNetworking.WebSocketNetworkNetDriver", DriverClassNameFallback="/Script/WebSocketNetworking.WebSocketNetworkNetDriver")
+
++NetDriverDefinitions=(DefName="GameNetDriver", DriverClassName="/Script/WebSocketNetworking.WebSocketNetworkNetDriver",
+DriverClassNameFallback="/Script/WebSocketNetworking.WebSocketNetworkNetDriver")
 
 
 # Plugins
