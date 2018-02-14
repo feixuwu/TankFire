@@ -107,5 +107,7 @@ with c++.
   This is a NetDriver for HTML5. beacuse the engine HTML5Networking have critical bug on server, So I create this plugin for HTML5.
   
  
+# LICENSE
+ See [License](LICENSE);
 
   
