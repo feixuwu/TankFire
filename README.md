@@ -24,3 +24,6 @@ Finaly I finished the basic game, and you here is the html5 version, you can use
 
 # Architecture
 
+  Here is the basic Server architecture:
+    
+    ![ScreenShot](docs/arch.PNG)
