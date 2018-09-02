@@ -31,15 +31,6 @@
 		{
 			"Name": "HTML5Networking",
 			"Enabled": false
-		},
-		{
-			"Name": "OnlineSubsystemLive",
-			"Enabled": true,
-			"SupportedTargetPlatforms": [
-				"XboxOne",
-				"UWP64",
-				"UWP32"
-			]
 		}
 	]
 }
