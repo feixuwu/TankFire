@@ -14,6 +14,7 @@ var AgentManager = /** @class */ (function () {
     AgentManager.registerAgent = function (host, port, zone) {
         var key = host + "_" + port;
         AgentManager.agentList[key] = { host: host, port: port, zone: zone };
+        console.log("register agent:" + key)
     };
     AgentManager.checkAlive = function () {
         var keys = Object.keys(AgentManager.agentList);

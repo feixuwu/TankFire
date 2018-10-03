@@ -13,14 +13,7 @@ public class WebSocket : ModuleRules
 
     public WebSocket(ReadOnlyTargetRules Target) : base(Target)
     {
-		
-		PublicIncludePaths.AddRange(
-			new string[] {
-				"WebSocket/Public"
-				// ... add public include paths required here ...
-			}
-			);
-				
+						
 		
 		PrivateIncludePaths.AddRange(
 			new string[] {
@@ -201,9 +194,6 @@ public class WebSocket : ModuleRules
             {
                 PublicAdditionalLibraries.Add(Lib);
             }
-            
-            string PluginPath = Utils.MakePathRelativeTo(ModuleDirectory, Target.RelativeEnginePath);
-            AdditionalPropertiesForReceipt.Add(new ReceiptProperty("AndroidPlugin", Path.Combine(PluginPath, "WebSocket_UPL.xml")));
         }
     }
 }

@@ -1,16 +1,16 @@
 {
     "centerServer":{
         "forclient":{
-            "host":"192.168.1.3",
+            "host":"127.0.0.1",
             "port":8000
         },
         "forserver":{
-            "host":"192.168.1.3",
+            "host":"127.0.0.1",
             "port":9000
         },
-        "host":"192.168.1.3",
+        "host":"127.0.0.1",
         "port":8001,
-        "redishost":"192.168.1.107",
+        "redishost":"127.0.0.1",
         "redisport":6379,
         "gameconfig":{
             "maxplayercnt":5,
@@ -22,13 +22,13 @@
             {
                 "Id":0,
                 "name":"america",
-                "sampleIp":"192.168.1.3",             
+                "sampleIp":"127.0.0.1",             
                 "sampleport":5000  
             },
             {
                 "Id":1,
                 "name":"asia",
-                "sampleIp":"192.168.1.3",             
+                "sampleIp":"127.0.0.1",             
                 "sampleport":5000  
             }
         ]
@@ -36,10 +36,10 @@
 
     "agentServer":{
         "cmd":"cd D:/GitHub/TankFire&&runserver.bat",
-        "host":"192.168.1.3",
+        "host":"127.0.0.1",
         "port":6000,
         "zone":0,
-        "samplehost":"192.168.1.3",
+        "samplehost":"127.0.0.1",
         "sampleport":5000
     }
 }

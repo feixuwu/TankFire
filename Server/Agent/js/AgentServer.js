@@ -12,7 +12,11 @@ var AgentServer = /** @class */ (function () {
     function AgentServer() {
     }
     AgentServer.prototype.createNewServer = function () {
+        console.log("ready create server")
         child_process_1.exec(config.agentServer.cmd, function (error, stdout, stderr) {
+            if(error != null){
+                console.log(error + stdout)
+            }
         });
     };
     return AgentServer;
@@ -26,6 +30,7 @@ setInterval(function () {
             console.log(error);
             return;
         }
+        console.log("readt register agent")
         center.registerAgent(config.agentServer.host, config.agentServer.port, config.agentServer.zone);
     });
 }, 2000);

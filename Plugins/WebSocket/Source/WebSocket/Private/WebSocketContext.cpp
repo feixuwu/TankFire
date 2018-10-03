@@ -24,7 +24,9 @@
 #include "WebSocketContext.h"
 #include "UObjectGlobals.h"
 #include "WebSocketBase.h"
-
+#include "Paths.h"
+#include "FileManager.h"
+#include "FileHelper.h"
 
 #define MAX_PAYLOAD	64*1024
 
@@ -156,6 +158,36 @@ void UWebSocketContext::CreateCtx()
 	info.extensions = exts;
 	info.options = LWS_SERVER_OPTION_VALIDATE_UTF8;
 	info.options |= LWS_SERVER_OPTION_DO_SSL_GLOBAL_INIT;
+
+	FString PEMFilename = FPaths::ProjectSavedDir() / TEXT("ca-bundle.pem");
+#if PLATFORM_ANDROID
+	extern FString GExternalFilePath;
+	PEMFilename = GExternalFilePath / TEXT("ca-bundle.pem");
+#endif
+
+	if (!FPaths::FileExists(PEMFilename))
+	{
+		UE_LOG(LogInit, Log, TEXT(" websocket: not exist PEM file: '%s'"), *PEMFilename);
+		IFileManager* FileManager = &IFileManager::Get();
+		auto Ar = TUniquePtr<FArchive>(FileManager->CreateFileWriter(*PEMFilename, 0));
+		if (Ar)
+		{
+			UE_LOG(LogInit, Log, TEXT(" websocket: generate PEM file: '%s'"), *PEMFilename);
+			FString Contents;
+			FString OverridePEMFilename = FPaths::ProjectContentDir() + TEXT("CA/ca-bundle.pem");
+			if (FFileHelper::LoadFileToString(Contents, *OverridePEMFilename))
+			{
+				const TCHAR* StrPtr = *Contents;
+				auto Src = StringCast<ANSICHAR>(StrPtr, Contents.Len());
+				Ar->Serialize((ANSICHAR*)Src.Get(), Src.Length() * sizeof(ANSICHAR));
+			}
+		}
+	}
+	UE_LOG(LogInit, Log, TEXT(" websocket: using generated PEM file: '%s'"), *PEMFilename);
+
+	mstrCAPath = TCHAR_TO_UTF8(*PEMFilename);
+
+	info.ssl_ca_filepath = mstrCAPath.c_str();
 
 	mlwsContext = lws_create_context(&info);
 	if (mlwsContext == nullptr)

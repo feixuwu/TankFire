@@ -25,6 +25,7 @@ export class AgentManager{
     static registerAgent(host:string, port:number, zone:number){
         var key = host + "_" + port
         AgentManager.agentList[key] = {host:host, port:port, zone:zone};
+        console.log("register agent:" + key)
     }
 
     static checkAlive(){
