@@ -42,6 +42,8 @@ Current Only test with 4.18.
   
 # Quick Run
 
+to help people run the game on local machine, I upload a package on [here](https://www.dropbox.com/s/44uynbou53tj7wt/TankFire.7z?dl=0),you can first run the startserver.sh, and then start client to join game, since the config bind address is 127.0.0.1, you can only play game on your local machine with this package.
+
 ## install nodejs
   Because the CenterServer And AgentServer are run by nodejs, you first need install nodejs,here is the [link])(https://nodejs.org/en/).
   
